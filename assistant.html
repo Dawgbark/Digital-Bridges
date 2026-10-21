@@ -1,145 +1,100 @@
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AI Assistant | Digital Bridges</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Digital Bridges | Learning Assistant</title>
+<style>
+:root{--navy:#17324d;--teal:#147d80;--gold:#e5b44c;--sky:#eaf4f8;--paper:#fff;--ink:#243746;--muted:#5d6d78;--line:#d8e3e8}
+*{box-sizing:border-box}
+body{margin:0;background:#f5f8fa;color:var(--ink);font-family:"DM Sans","Segoe UI",Arial,sans-serif;line-height:1.55}
+header{background:var(--navy);color:white;padding:22px max(20px,calc((100% - 1100px)/2));display:flex;align-items:center;gap:14px}
+.logo{display:grid;place-items:center;width:46px;height:46px;border-radius:12px;background:var(--gold);color:var(--navy);font-weight:800}
+.brand{font-size:1.1rem;font-weight:750}.brand small{display:block;font-weight:400;font-size:.84rem;color:#dce8ef}
+main{max-width:1100px;margin:28px auto;padding:0 18px;display:grid;grid-template-columns:300px minmax(0,1fr);gap:20px}
+aside,.panel{background:var(--paper);border:1px solid var(--line);border-radius:16px;overflow:hidden}
+aside{padding:22px;height:fit-content}
+h1{font-size:1.65rem;line-height:1.2;color:var(--navy);margin:0 0 12px}
+h2{font-size:1rem;color:var(--navy);margin:24px 0 10px}
+p{margin:0 0 14px}.muted{color:var(--muted);font-size:.92rem}
+.topic{display:block;width:100%;text-align:left;padding:12px;margin:8px 0;border:1px solid var(--line);border-radius:10px;background:white;color:var(--ink);font:inherit;cursor:pointer}
+.topic:hover,.topic:focus{border-color:var(--teal);background:var(--sky)}
+.safety{margin-top:18px;background:#fff8e8;border-left:4px solid var(--gold);padding:12px;border-radius:8px;font-size:.9rem}
+.panel{min-height:640px;display:flex;flex-direction:column}
+.panel-head{padding:18px 22px;border-bottom:1px solid var(--line);display:flex;gap:12px;align-items:center}
+.avatar{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;background:var(--sky);color:var(--teal);font-size:1.2rem}
+.panel-head strong{color:var(--navy)}.status{font-size:.83rem;color:var(--teal)}
+.messages{padding:22px;flex:1;min-height:380px;max-height:560px;overflow:auto}
+.message{white-space:pre-wrap;max-width:88%;padding:13px 15px;border-radius:13px;margin:0 0 14px}
+.bot{background:var(--sky);border-bottom-left-radius:4px}.user{background:var(--teal);color:white;margin-left:auto;border-bottom-right-radius:4px}
+.label{display:block;font-size:.7rem;font-weight:800;letter-spacing:.06em;margin-bottom:5px;opacity:.75}
+.quick{padding:0 22px 14px;display:flex;gap:8px;flex-wrap:wrap}
+.quick button{border:1px solid var(--line);border-radius:20px;padding:8px 12px;background:white;color:var(--navy);cursor:pointer}
+.composer{display:flex;gap:10px;padding:16px 20px;border-top:1px solid var(--line)}
+.composer input{min-width:0;flex:1;border:1px solid #b8c9d2;border-radius:10px;padding:13px;font:inherit}
+.composer button{border:0;border-radius:10px;padding:0 20px;background:var(--teal);color:white;font:inherit;font-weight:700;cursor:pointer}
+.note{padding:12px 20px;background:#f3f7f7;color:var(--muted);font-size:.8rem}
+footer{max-width:1100px;margin:0 auto 28px;padding:0 18px;color:var(--muted);font-size:.85rem}
+@media(max-width:760px){main{grid-template-columns:1fr;margin-top:16px}.panel{min-height:600px}header{padding:18px}.messages{max-height:420px}.message{max-width:96%}}
+</style>
 </head>
 <body>
-
-<header class="site-header">
-  <div class="header-inner">
-    <a href="index.html" class="brand">
-      <img src="Digital%20Bridges.png" alt="Digital Bridges Logo">
-    </a>
-    <nav aria-label="Main navigation">
-      <a href="index.html">Home</a>
-      <a href="about.html">About Us</a>
-      <a href="programs.html">Our Programs</a>
-      <a href="resources.html">Resources</a>
-      <a href="assistant.html" class="active" aria-current="page">AI Assistant</a>
-    </nav>
-  </div>
-</header>
-
+<header><div class="logo" aria-hidden="true">DB</div><div class="brand">Digital Bridges<small>Technology Learning Assistant</small></div></header>
 <main>
-  <section class="page-hero">
-    <div class="container">
-      <span class="eyebrow">Your Technology Learning Companion</span>
-      <h1>Digital Bridges AI Assistant</h1>
-      <p>
-        A friendly space designed to help you learn
-        about technology, ask questions, and build confidence.
-      </p>
-    </div>
-  </section>
-
-  <section class="section container">
-    <div class="split-layout">
-      <div>
-        <span class="eyebrow">Coming Soon</span>
-        <h2>Technology Questions Made Simple</h2>
-        <p>
-          Our team is developing an AI assistant
-          designed specifically for individuals
-          who want to learn about technology.
-        </p>
-        <p>
-          The assistant will aim to explain
-          complicated concepts in simple terms,
-          provide helpful examples, and guide
-          users through common technology questions.
-        </p>
-
-        <div class="feature-panel">
-          <h3>What Our Assistant Will Help With</h3>
-          <ul class="check-list">
-            <li>Understanding artificial intelligence</li>
-            <li>Learning everyday technology skills</li>
-            <li>Recognizing online scams</li>
-            <li>Understanding technology terminology</li>
-            <li>Learning at your own pace</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="chatbot-container">
-        <div class="chatbot-header">
-          <div class="chatbot-avatar">DB</div>
-          <div>
-            <h3>Digital Bridges AI Guide</h3>
-            <span>Preview Only</span>
-          </div>
-        </div>
-
-        <div class="chatbot-messages">
-          <div class="bot-message">
-            Hello! Welcome to Digital Bridges.
-            I'm your future AI learning guide.
-            I'm here to help make technology
-            easier to understand.
-          </div>
-
-          <p class="chatbot-label">Example questions:</p>
-
-          <div class="example-question">
-            What is artificial intelligence?
-          </div>
-
-          <div class="example-question">
-            How can I recognize an online scam?
-          </div>
-
-          <div class="example-question">
-            How do I use AI safely?
-          </div>
-        </div>
-
-        <div class="chatbot-input-preview">
-          <span>Chat functionality coming soon...</span>
-          <span aria-hidden="true">➤</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section section-light">
-    <div class="container section-heading">
-      <h2>Learn Safely and Confidently</h2>
-      <p>
-        Never share passwords, banking information,
-        Social Security numbers, or other sensitive
-        details with an AI assistant. Always verify
-        important information using trusted sources.
-      </p>
-      <a href="resources.html" class="btn btn-primary">
-        Explore Technology Resources
-      </a>
-    </div>
-  </section>
+<aside>
+<h1>Let's learn together.</h1>
+<p class="muted">Patient, step-by-step support for adults learning about AI and everyday technology.</p>
+<h2>Choose a curriculum topic</h2>
+<button class="topic" data-topic="ai">🤖 Understanding AI</button>
+<button class="topic" data-topic="appointments">📅 Appointments and patient portals</button>
+<button class="topic" data-topic="travel">🧳 Travel planning</button>
+<button class="topic" data-topic="home">🛒 Household tasks and organization</button>
+<button class="topic" data-topic="money">🔒 Bills and financial safety</button>
+<button class="topic" data-topic="device">📱 Help with my device</button>
+<button class="topic" data-topic="scams">🛡️ Scams and online safety</button>
+<button class="topic" data-topic="sources">📚 Curriculum source library</button>
+<div class="safety"><strong>Your safety matters.</strong><br>Never share passwords, PINs, bank credentials, authentication codes, or sensitive personal details in a chat.</div>
+</aside>
+<section class="panel" aria-label="Digital Bridges curriculum assistant">
+<div class="panel-head"><div class="avatar" aria-hidden="true">✦</div><div><strong>Your learning helper</strong><div class="status">● Curriculum mode · No generative AI</div></div></div>
+<div class="messages" id="messages" aria-live="polite">
+<div class="message bot"><span class="label">DIGITAL BRIDGES</span>Hello! I'm your Digital Bridges learning helper. I use predefined guidance based on the Digital Bridges curriculum. I can help with AI basics, appointments, travel planning, household tasks, financial safety, devices, and online scams. What would you like to learn?</div>
+</div>
+<div class="quick"><button data-topic="ai">What is AI?</button><button data-topic="device">Help with my device</button><button data-topic="scams">Stay safe online</button></div>
+<form class="composer" id="chatForm"><input id="userInput" autocomplete="off" placeholder="Type a question or choose a topic…" aria-label="Type a question"><button type="submit">Send</button></form>
+<div class="note">This is a curriculum-based demo. Replies are predefined and do not use generative AI. If a question is not covered, the assistant will say so rather than invent an answer.</div>
+</section>
 </main>
-
-<footer class="site-footer">
-  <div class="container footer-grid">
-    <div>
-      <h3>Digital Bridges</h3>
-      <p>Connecting People. Building Confidence.</p>
-      <p>Making technology education more accessible for older adults.</p>
-    </div>
-    <div>
-      <h3>Explore</h3>
-      <a href="index.html">Home</a>
-      <a href="about.html">About Us</a>
-      <a href="programs.html">Our Programs</a>
-      <a href="resources.html">Technology Resources</a>
-    </div>
-  </div>
-  <div class="container footer-bottom">
-    <p>&copy; 2026 Digital Bridges. Educational nonprofit concept.</p>
-  </div>
-</footer>
-
+<footer>Digital Bridges encourages learning at your own pace. For personalized help, contact your local branch or ask a trusted person for assistance.</footer>
+<script>
+const messages=document.getElementById('messages'), input=document.getElementById('userInput');
+const answers={
+ai:"The Digital Bridges curriculum introduces AI as a technology people can use alongside trusted websites and applications. It can support everyday tasks such as planning a trip or understanding a confusing document. Important information should be checked with trustworthy, current sources because AI can produce incorrect or outdated information. Would you like to review the steps or choose another topic?",
+appointments:"The curriculum says you can use technology to help prepare for appointments. You can locate an official scheduling page, prepare questions, learn about patient portals, and create reminders. For virtual healthcare visits, the curriculum points to the National Institute on Aging's telehealth guide. Confirm details with the healthcare provider. This assistant cannot book an appointment or access an account.",
+travel:"The curriculum says AI can help organize a travel itinerary, packing list, or comparison checklist. Confirm prices, schedules, reservations, and accessibility details directly with official travel providers. The assistant cannot make reservations or verify live prices.",
+home:"The curriculum includes household uses such as meal planning, shopping lists, emails, calendars, and organizing information. Start with one task at a time. If the steps depend on your device, tell me whether you use an iPhone, Android phone, Windows computer, Mac, or another device. This demo only has predefined guidance, so it may not have detailed steps for every app.",
+money:"The curriculum says technology can help explain bill terminology and organize a budget. Never share passwords, bank credentials, PINs, full account details, or authentication codes. Be cautious of urgent payment demands, suspicious links, impersonation, and requests to keep something secret. Contact a bank or organization using contact information you independently verify.",
+device:"I can help you choose the right kind of guidance, but the steps depend on your device. Are you using an iPhone, an Android phone, a Windows computer, a Mac, or something else? Please do not share passwords, verification codes, or private account information. This demo has predefined curriculum guidance rather than instructions for every device or app.",
+scams:"The curriculum warns about urgent payment demands, suspicious links, impersonation, and requests for secrecy. Never share authentication codes or sensitive personal information. Contact the organization through independently verified contact information. The curriculum references the Federal Trade Commission's resource on scams affecting older adults. A suspicious message cannot be guaranteed safe just by looking at it.",
+sources:"The curriculum's source library names these resources: Senior Planet from AARP — AI for Older Adults; OpenAI — Helping Older Adults Use AI in Everyday Life; National Institute on Aging — Telehealth; Federal Trade Commission — Addressing Scams Affecting Older Adults; Medicare.gov — Telehealth Coverage; and AARP Research — Older Adults and AI. This demo lists the sources from your curriculum but does not include or verify the full text of those resources. Use their official websites for the original materials.",
+fallback:"I don't have an approved answer for that question in the Digital Bridges curriculum available in this demo. I don't want to guess or give you information that may be wrong. Please choose one of the curriculum topics, consult the listed official source, or ask a Digital Bridges mentor for help."
+};
+function addMessage(text,who){const d=document.createElement('div');d.className='message '+who;const label=document.createElement('span');label.className='label';label.textContent=who==='user'?'YOU':'DIGITAL BRIDGES';d.appendChild(label);d.appendChild(document.createTextNode(text));messages.appendChild(d);messages.scrollTop=messages.scrollHeight}
+function pickTopic(q){const s=q.toLowerCase();
+ if(/scam|fraud|phish|suspicious|fake message|online safety/.test(s))return 'scams';
+ if(/appointment|patient portal|telehealth|doctor|healthcare|virtual visit/.test(s))return 'appointments';
+ if(/travel|trip|itinerary|packing|flight|vacation/.test(s))return 'travel';
+ if(/bill|budget|bank|money|financial|payment|pin|password|account/.test(s))return 'money';
+ if(/device|iphone|android|windows|mac|phone|computer|tablet|app/.test(s))return 'device';
+ if(/meal|shopping list|calendar|email|household|organize/.test(s))return 'home';
+ if(/source|resource|reference|library/.test(s))return 'sources';
+ if(/\bai\b|artificial intelligence|what can ai|what is ai/.test(s))return 'ai';
+ return 'fallback';
+}
+function send(q){q=q.trim();if(!q)return;addMessage(q,'user');input.value='';const key=pickTopic(q);addMessage(answers[key],'bot')}
+document.getElementById('chatForm').addEventListener('submit',e=>{e.preventDefault();send(input.value)});
+document.querySelectorAll('[data-topic]').forEach(b=>b.addEventListener('click',()=>send(b.textContent.trim())));
+</script>
 </body>
 </html>
