@@ -3,225 +3,267 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Technology Resources | Digital Bridges</title>
   <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
 
+<a class="skip-link" href="#main">Skip to content</a>
+
 <header class="site-header">
-  <div class="header-inner">
+  <div class="container header-inner">
     <a href="index.html" class="brand">
-      <img src="Digital%20Bridges.png" alt="Digital Bridges Logo">
+      <img src="Digital%20Bridges.png" alt="Digital Bridges">
     </a>
-    <nav aria-label="Main navigation">
+    <button class="menu-toggle" type="button"
+      aria-expanded="false" aria-controls="site-nav">☰ Menu</button>
+    <nav id="site-nav" aria-label="Main navigation">
       <a href="index.html">Home</a>
       <a href="about.html">About Us</a>
-      <a href="programs.html">Our Programs</a>
-      <a href="resources.html" class="active" aria-current="page">Resources</a>
-      <a href="assistant.html" class="nav-highlight">AI Assistant</a>
+      <a href="programs.html">Programs</a>
+      <a href="resources.html" class="selected">Resources</a>
+      <a href="get-involved.html">Get Involved</a>
+      <a href="assistant.html" class="nav-cta">AI Assistant</a>
     </nav>
   </div>
 </header>
 
-<main>
-  <section class="page-hero">
+<main id="main">
+  <section class="page-intro">
     <div class="container">
       <span class="eyebrow">Learn at Your Own Pace</span>
       <h1>Technology Resources</h1>
       <p>
-        Simple explanations, practical guides, and
-        helpful tips for using technology safely.
+        Helpful explanations and practical advice
+        for using technology safely and confidently.
       </p>
     </div>
   </section>
 
-  <section class="section container">
-    <div class="section-heading">
-      <span class="eyebrow">Getting Started</span>
-      <h2>Understanding Artificial Intelligence</h2>
-      <p>
-        Artificial intelligence, often called AI,
-        allows computers to perform tasks such as
-        understanding language, recognizing patterns,
-        and generating responses.
-      </p>
-    </div>
-
-    <div class="card-grid">
-      <article class="card">
-        <div class="card-icon">🎙️</div>
-        <h3>Voice Assistants</h3>
-        <p>
-          Tools that can answer questions, set
-          reminders, and help with everyday tasks.
-        </p>
-      </article>
-
-      <article class="card">
-        <div class="card-icon">💬</div>
-        <h3>AI Chatbots</h3>
-        <p>
-          Programs that can explain topics, help
-          draft messages, and answer questions.
-        </p>
-      </article>
-
-      <article class="card">
-        <div class="card-icon">🌐</div>
-        <h3>Translation Tools</h3>
-        <p>
-          Technology that helps people understand
-          and communicate in different languages.
-        </p>
-      </article>
-    </div>
-  </section>
-
-  <section class="section section-light">
+  <section class="section">
     <div class="container">
       <div class="section-heading">
-        <span class="eyebrow">Protect Yourself</span>
-        <h2>Staying Safe Online</h2>
+        <span class="eyebrow">Getting Started</span>
+        <h2>Understanding Artificial Intelligence</h2>
         <p>
-          Understanding online safety is one of the
-          most important parts of digital literacy.
+          AI is technology that enables computers
+          to perform tasks such as understanding
+          language, recognizing patterns, and
+          generating responses.
         </p>
       </div>
 
       <div class="card-grid">
-        <article class="card">
-          <div class="card-icon">🔒</div>
-          <h3>Protect Personal Information</h3>
+        <article class="feature-card">
+          <div class="icon-circle">◉</div>
+          <h3>Voice Assistants</h3>
           <p>
-            Never share passwords, verification codes,
-            or sensitive financial information with
-            unknown individuals or AI chatbots.
+            Ask questions, set reminders, and
+            complete simple tasks using your voice.
           </p>
         </article>
 
-        <article class="card">
-          <div class="card-icon">⚠️</div>
-          <h3>Recognize Scams</h3>
+        <article class="feature-card">
+          <div class="icon-circle">▣</div>
+          <h3>AI Chatbots</h3>
           <p>
-            Be cautious of unexpected messages,
-            suspicious links, and urgent requests
-            for money or personal information.
+            Ask questions, understand new topics,
+            and receive help drafting messages.
           </p>
         </article>
 
-        <article class="card">
-          <div class="card-icon">✓</div>
-          <h3>Verify Information</h3>
+        <article class="feature-card">
+          <div class="icon-circle">◎</div>
+          <h3>Translation Tools</h3>
           <p>
-            AI tools can provide incorrect information.
-            Always verify important facts using
-            reliable sources.
+            Translate words and sentences to
+            communicate across languages.
           </p>
         </article>
       </div>
     </div>
   </section>
 
-  <section class="section container">
-    <div class="section-heading">
-      <span class="eyebrow">Beginner Guides</span>
-      <h2>Common Technology Questions</h2>
-      <p>
-        Select a question below to learn more.
-      </p>
-    </div>
-
-    <div class="faq-container">
-      <details>
-        <summary>What is an AI chatbot?</summary>
+  <section class="section tint">
+    <div class="container split">
+      <div>
+        <span class="eyebrow">Online Safety</span>
+        <h2>Protect Yourself While Using Technology</h2>
         <p>
-          An AI chatbot is a computer program that
-          responds to questions and messages.
-          It can help explain topics, generate
-          ideas, and assist with everyday tasks.
+          Digital literacy includes knowing how
+          to recognize risks and protect your
+          personal information.
         </p>
-      </details>
-
-      <details>
-        <summary>How can AI help me write an email?</summary>
+        <ul class="tick-list">
+          <li>Use strong, unique passwords</li>
+          <li>Never share verification codes</li>
+          <li>Be cautious of suspicious messages</li>
+          <li>Verify information before sharing it</li>
+          <li>Avoid unexpected links and attachments</li>
+          <li>Ask a trusted person when unsure</li>
+        </ul>
+      </div>
+      <div class="statement">
+        <h3>Remember</h3>
         <p>
-          You can ask an AI tool to help create
-          a friendly or professional email.
-          Review the response and make changes
-          before sending it.
+          Scammers may impersonate businesses,
+          family members, or government organizations.
         </p>
-      </details>
-
-      <details>
-        <summary>How do I recognize a suspicious email?</summary>
         <p>
-          Look for unexpected links, urgent demands,
-          unusual sender addresses, and requests
-          for private information. Contact the
-          organization directly if you are unsure.
+          If someone unexpectedly asks for money
+          or private information, stop and verify
+          the request using a trusted contact method.
         </p>
-      </details>
-
-      <details>
-        <summary>Can I trust everything AI tells me?</summary>
-        <p>
-          No. AI can make mistakes or generate
-          incorrect information. Verify important
-          medical, financial, and legal information
-          with trusted professionals or sources.
-        </p>
-      </details>
-
-      <details>
-        <summary>How do I protect my privacy online?</summary>
-        <p>
-          Use strong, unique passwords, enable
-          multifactor authentication when available,
-          and avoid sharing sensitive information
-          on unfamiliar websites.
-        </p>
-      </details>
+      </div>
     </div>
   </section>
 
-  <section class="cta-section">
+  <section class="section">
+    <div class="container">
+      <div class="section-heading">
+        <span class="eyebrow">Beginner Questions</span>
+        <h2>Frequently Asked Questions</h2>
+        <p>Select a question to view the answer.</p>
+      </div>
+
+      <div class="faq-list">
+        <details>
+          <summary>What is an AI chatbot?</summary>
+          <p>
+            An AI chatbot is a computer program that
+            can respond to questions and messages.
+            It can explain topics, suggest ideas,
+            and help with everyday tasks.
+          </p>
+        </details>
+
+        <details>
+          <summary>How can AI help me write an email?</summary>
+          <p>
+            You can ask an AI tool to create a
+            draft email. Review the response,
+            correct any mistakes, and personalize
+            it before sending.
+          </p>
+        </details>
+
+        <details>
+          <summary>How can I recognize a scam?</summary>
+          <p>
+            Watch for urgent requests, suspicious
+            links, unusual sender addresses, and
+            demands for personal information.
+            Verify unexpected requests independently.
+          </p>
+        </details>
+
+        <details>
+          <summary>Can I trust everything AI tells me?</summary>
+          <p>
+            No. AI can make mistakes and provide
+            inaccurate information. Always verify
+            important information with reliable sources.
+          </p>
+        </details>
+
+        <details>
+          <summary>How do I protect my privacy?</summary>
+          <p>
+            Use strong passwords, enable multifactor
+            authentication, and avoid sharing sensitive
+            information with unfamiliar services.
+          </p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="section tint">
+    <div class="container">
+      <div class="section-heading">
+        <span class="eyebrow">Additional Learning</span>
+        <h2>Trusted Technology Resources</h2>
+        <p>
+          Explore educational information from
+          established organizations.
+        </p>
+      </div>
+
+      <div class="card-grid">
+        <article class="feature-card">
+          <h3>Senior Planet from AARP</h3>
+          <p>
+            Technology classes and resources
+            designed for older adults.
+          </p>
+          <a href="https://seniorplanet.org/"
+            target="_blank" rel="noopener noreferrer"
+            class="card-link">Visit Senior Planet →</a>
+        </article>
+
+        <article class="feature-card">
+          <h3>Federal Trade Commission</h3>
+          <p>
+            Consumer information about scams,
+            fraud prevention, and online safety.
+          </p>
+          <a href="https://consumer.ftc.gov/"
+            target="_blank" rel="noopener noreferrer"
+            class="card-link">Visit FTC Consumer Advice →</a>
+        </article>
+
+        <article class="feature-card">
+          <h3>National Council on Aging</h3>
+          <p>
+            Resources supporting older adults'
+            well-being and independence.
+          </p>
+          <a href="https://www.ncoa.org/"
+            target="_blank" rel="noopener noreferrer"
+            class="card-link">Visit NCOA →</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-band">
     <div class="container">
       <h2>Have More Questions?</h2>
-      <p>
-        Our team is developing an AI assistant
-        to make learning about technology easier.
-      </p>
-      <a href="assistant.html" class="btn btn-white">
-        Explore Our AI Assistant
-      </a>
+      <p>Learn about our future AI learning assistant.</p>
+      <a href="assistant.html" class="btn white">Meet Our AI Assistant →</a>
     </div>
   </section>
 </main>
 
-<footer class="site-footer">
-  <div class="container footer-grid">
+<footer>
+  <div class="container footer-layout">
     <div>
-      <h3>Digital Bridges</h3>
+      <img src="Digital%20Bridges.png" alt="" class="footer-logo">
       <p>Connecting People. Building Confidence.</p>
-      <p>Making technology education more accessible for older adults.</p>
+      <small>Educational nonprofit concept.</small>
     </div>
     <div>
       <h3>Explore</h3>
       <a href="index.html">Home</a>
       <a href="about.html">About Us</a>
-      <a href="programs.html">Our Programs</a>
-      <a href="assistant.html">AI Assistant</a>
+      <a href="programs.html">Programs</a>
+      <a href="get-involved.html">Get Involved</a>
+    </div>
+    <div>
+      <h3>Learn Safely</h3>
+      <p>Never share passwords or sensitive financial details with AI tools.</p>
+      <a href="assistant.html">AI Assistant Preview →</a>
     </div>
   </div>
   <div class="container footer-bottom">
-    <p>&copy; 2026 Digital Bridges. Educational nonprofit concept.</p>
+    © 2026 Digital Bridges. A proposed nonprofit initiative.
   </div>
 </footer>
 
 </body>
 </html>
-
 
 </body>
 </html>
