@@ -1,36 +1,16 @@
 
-// DIGITAL BRIDGES WEBSITE NAVIGATION
+const toggle = document.querySelector(".menu-toggle");
+const nav = document.querySelector("#site-nav");
 
-document.addEventListener("DOMContentLoaded", function () {
+if (toggle && nav) {
+  toggle.addEventListener("click", () => {
+    const isOpen =
+      toggle.getAttribute("aria-expanded") === "true";
 
-  const menuButton = document.querySelector(".menu-toggle");
-  const navigation = document.getElementById("site-nav");
-
-  if (!menuButton || !navigation) {
-    return;
-  }
-
-  menuButton.addEventListener("click", function () {
-
-    const isOpen = navigation.classList.toggle("open");
-
-    menuButton.setAttribute(
-      "aria-expanded",
-      String(isOpen)
-    );
-
+    toggle.setAttribute("aria-expanded", String(!isOpen));
+    nav.classList.toggle("open", !isOpen);
   });
-
-  navigation.querySelectorAll("a").forEach(function (link) {
-
-    link.addEventListener("click", function () {
-
-      navigation.classList.remove("open");
-
-      menuButton.setAttribute("aria-expanded", "false");
-
-    });
-
+}
   });
 
 });
