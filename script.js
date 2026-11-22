@@ -16,7 +16,21 @@ if (toggle && nav) {
 const faqQuestions = document.querySelectorAll(".faq-list details");
 
 faqQuestions.forEach(function(faq) {
-  faq.addEventListener("toggle", function() {
-    faq.classList.toggle("active", faq.open);
+  const question = faq.querySelector("summary");
+
+  question.addEventListener("click", function(event) {
+    event.preventDefault();
+
+    const wasOpen = faq.open;
+
+    faqQuestions.forEach(function(item) {
+      item.open = false;
+      item.classList.remove("active");
+    });
+
+    if (!wasOpen) {
+      faq.open = true;
+      faq.classList.add("active");
+    }
   });
 });
