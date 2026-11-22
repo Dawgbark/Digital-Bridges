@@ -1,3 +1,4 @@
+
 /* Responsive Navigation Menu */
 const toggle = document.querySelector(".menu-toggle");
 const nav = document.querySelector("#site-nav");
